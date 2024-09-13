@@ -25,7 +25,7 @@ resources:
     DelfrinandoEmailSns:
       Type: AWS::SNS::Topic
       Properties:
-        TopicName: ben-email-topic
+        TopicName: benz-email-topic
         Subscription: 
           - Protocol: "email"
             Endpoint: "bengeepaton@gmail.com"
