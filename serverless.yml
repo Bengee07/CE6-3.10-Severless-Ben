@@ -19,3 +19,13 @@ functions:
       - httpApi:
           path: /
           method: get
+
+resources:
+  Resources:
+    DelfrinandoEmailSns:
+      Type: AWS::SNS::Topic
+      Properties:
+        TopicName: ben-email-topic
+        Subscription: 
+          - Protocol: "email"
+            Endpoint: "bengeepaton@gmail.com"
