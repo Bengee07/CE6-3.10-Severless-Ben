@@ -43,7 +43,7 @@ jobs:
       - name: Run tests
         run: npm test
 
-    deploy_to_serverless:
+  deploy_to_serverless:
     runs-on: ubuntu-latest
     needs: run_tests  # This job depends on the run_tests job
 
