@@ -73,4 +73,4 @@ jobs:
 
       - name: Deploy to Serverless
         run: |
-          serverless deploy
+          sls deploy
