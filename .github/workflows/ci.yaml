@@ -43,6 +43,9 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Install serverless-offline plugin
+        run: npm install serverless-offline
+
   deploy_to_aws:
     runs-on: ubuntu-latest
     needs: run_tests  # This job depends on the run_tests job
