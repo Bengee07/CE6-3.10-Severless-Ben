@@ -6,28 +6,28 @@ on:
     branches:  [ main, "*"]
 
 jobs:
-  # install-dependencies:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Check out repository code
-  #       uses: actions/checkout@v3
-  #     - name: Run Installation of Dependencies Commands
-  #       run: npm install
+   install-dependencies:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Check out repository code
+         uses: actions/checkout@v3
+       - name: Run Installation of Dependencies Commands
+         run: npm install
   
-  # unit-tests:
-  #   runs-on: ubuntu-latest
-  #   needs: install-dependencies
-  #   steps:
-  #     - name: Check out repository code
-  #       uses: actions/checkout@v3
-  #     - name: Run Installation of Dependencies Commands
-  #       run: npm install
-  #     - name: Run Unit Tests
-  #       run: npm test
+   unit-tests:
+     runs-on: ubuntu-latest
+     needs: install-dependencies
+     steps:
+       - name: Check out repository code
+         uses: actions/checkout@v3
+       - name: Run Installation of Dependencies Commands
+       run: npm install
+      - name: Run Unit Tests
+        run: npm test
 
   deploy:
     name: deploy
-    # needs: unit-tests
+   needs: unit-tests
     runs-on: ubuntu-latest
     strategy:
       matrix:
