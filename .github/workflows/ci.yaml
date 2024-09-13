@@ -59,6 +59,9 @@ jobs:
       - name: Install Serverless Framework
         run: npm install -g serverless
 
+      - name: Authenticate with Serverless
+        run: serverless login --token ${{ secrets.SERVERLESS_ACCESS_KEY }}
+
       - name: Configure AWS Credentials
         if: success()  # This step runs only if the previous steps were successful
         uses: aws-actions/configure-aws-credentials@v1
